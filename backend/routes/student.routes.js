@@ -53,4 +53,17 @@ studentRoute.route('/update-student/:id').put((req, res, next) => {
   })
 })
 
+// Delete student
+studentRoute.route('/delete-student/:id').delete((req, res, next) => {
+  Student.findByIdAndRemove(req.params.id, (error, data) => {
+    if (error) {
+      return next(error);
+    } else {
+      res.status(200).json({
+        msg: data
+      })
+    }
+  })
+})
+
 module.exports = studentRoute;
