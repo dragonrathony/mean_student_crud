@@ -13,6 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /* Angular 8 CRUD services */
 import { ApiService } from './shared/api.service';
 
+/* Reactive form services in Angular 8 */
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +29,8 @@ import { ApiService } from './shared/api.service';
     BrowserAnimationsModule,
     AngularMaterialModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
