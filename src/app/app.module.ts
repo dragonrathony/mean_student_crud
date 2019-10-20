@@ -10,6 +10,9 @@ import { EditStudentComponent } from './components/edit-student/edit-student.com
 import { StudentsListComponent } from './components/students-list/students-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+/* Angular 8 CRUD services */
+import { ApiService } from './shared/api.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularMaterialModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
