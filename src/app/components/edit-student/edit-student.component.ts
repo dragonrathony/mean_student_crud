@@ -20,8 +20,8 @@ export class EditStudentComponent implements OnInit {
   selectable = true;
   removable = true;
   addOnBlur = true;
-  @ViewChild('chipList') chipList;
-  @ViewChild('resetStudentForm') myNgForm;
+  @ViewChild('chipList', { static: false }) chipList;
+  @ViewChild('resetStudentForm', { static: false }) myNgForm;
   readonly separatorKeysCodes: number[] = [ENTER, COMMA];
   studentForm: FormGroup;
   subjectArray: Subject[] = [];
